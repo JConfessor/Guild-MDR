@@ -1,0 +1,203 @@
+/* Estilos básicos */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  padding-top: 50px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: #222;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+  transition: all 0.3s ease;
+}
+
+header.scrolled {
+  background-color: rgba(34, 34, 34, 0.8); /* Transparência */
+  padding: 5px 0; /* Header menor */
+}
+
+header:hover,
+header:focus-within {
+  background-color: #222; /* Retorna opaco */
+  padding: 10px 0; /* Retorna ao tamanho original */
+}
+
+.logo {
+  width: 50px;
+  transition: 0.5s;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+section {
+  margin-top: 80px;
+  padding: 60px 20px;
+}
+
+a.nav-link {
+  color: #fff;
+  font-weight: 400;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  transition: font-weight 0.3s ease, color 0.3s ease;
+}
+
+a.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #fba42b;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+a.nav-link:hover {
+  font-weight: 600;
+  color: #fba42b;
+}
+
+a.nav-link:hover::after {
+  width: 100%;
+}
+
+.fab {
+  transition: color 0.3s ease;
+  font-size: 1.25rem; /* Tamanho reduzido dos ícones */
+}
+
+.fab:hover {
+  color: #fba42b;
+}
+
+/* Estilos do footer */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: #fba42b;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+  header {
+    padding: 10px 0;
+  }
+
+  .logo {
+    width: 40px;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+}
+
+/* Cards da seção de dicas */
+.card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Botões */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Seções com background */
+.section-dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.section-light {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Tabelas */
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  vertical-align: middle;
+  border-top: 1px solid #dee2e6;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-bordered {
+  border: 1px solid #dee2e6;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.table-hover tbody tr:hover td {
+  background-color: #f5f5f5;
+}
+
+.table td button {
+  transition: transform 0.2s ease-in-out;
+}
+
+.table td button:hover {
+  transform: scale(1.05);
+}

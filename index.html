@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Meta tags e links permanecem os mesmos -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guilda MDR - Rise of Kingdoms</title>
+    <!-- Link para o Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Link para os ícones do FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="bg-dark py-2">
+      <div class="container-fluid">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <!-- Logo -->
+          <a class="navbar-brand" href="#">
+            <img
+              src="assets/mdr.png"
+              alt="Logo MDR"
+              class="logo"
+              style="width: 50px"
+            />
+          </a>
+          <!-- Botão Hamburguer -->
+          <button
+            class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Links da Navbar e Ícones de Redes Sociais -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Centraliza os links da navbar -->
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#sobre">Sobre</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#codigos">Códigos</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#dicas">Dicas</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#noticias">Notícias</a>
+              </li>
+            </ul>
+            <!-- Ícones de redes sociais (aparecem apenas no mobile quando o menu é expandido) -->
+            <div class="d-md-none text-center mt-3">
+              <a href="#" class="mx-2"
+                ><i class="fab fa-discord text-light fa-lg"></i
+              ></a>
+              <a href="#" class="mx-2"
+                ><i class="fab fa-whatsapp text-light fa-lg"></i
+              ></a>
+              <a href="#" class="mx-2"
+                ><i class="fab fa-instagram text-light fa-lg"></i
+              ></a>
+            </div>
+          </div>
+          <!-- Ícones de redes sociais (visíveis apenas em telas médias ou maiores) -->
+          <div class="d-none d-md-flex">
+            <a href="#" class="mx-2"
+              ><i class="fab fa-discord text-light fa-lg"></i
+            ></a>
+            <a href="#" class="mx-2"
+              ><i class="fab fa-whatsapp text-light fa-lg"></i
+            ></a>
+            <a href="#" class="mx-2"
+              ><i class="fab fa-instagram text-light fa-lg"></i
+            ></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="py-5 section-fade">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Logo à esquerda -->
+          <div class="col-md-4 text-center">
+            <img src="assets/mdr.png" alt="Logo MDR" class="img-fluid" />
+          </div>
+          <!-- Texto à direita -->
+          <div class="col-md-8">
+            <h2>Sobre a Guilda MDR</h2>
+            <p>
+              Somos uma guilda brasileira no servidor #3644, focada em trabalho
+              em equipe e crescimento contínuo. Queremos nos tornar fortes
+              juntos e estamos sempre de portas abertas para novos membros que
+              compartilham dos mesmos valores. Venha se juntar a nós e fazer
+              parte de uma comunidade de sucesso no Rise of Kingdoms!
+            </p>
+            <a href="#" class="btn btn-primary mt-3">Jogue Conosco</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conteúdo Principal -->
+    <div id="codigos" class="container mt-5 pt-5 slide-in">
+      <h1 class="text-center text-primary">Códigos para Resgate</h1>
+      <p class="mt-4 text-center">
+        Utilize os seguintes códigos para resgatar recompensas incríveis no Rise
+        of Kingdoms:
+      </p>
+
+      <!-- Tabela de Códigos -->
+      <div class="table-responsive mt-4">
+        <table class="table table-bordered table-hover rounded">
+          <thead class="bg-primary text-white">
+            <tr>
+              <th scope="col">Data de Inclusão</th>
+              <th scope="col">Código</th>
+              <th scope="col">Descrição</th>
+              <th scope="col">Ação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01/10/2024</td>
+              <td id="code1">ROKYRRECAP</td>
+              <td>500 Gemas</td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary"
+                  onclick="copyCode('code1')"
+                >
+                  Copiar
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>01/10/2024</td>
+              <td id="code2">ROK2024HBD</td>
+              <td>100 Chaves de Prata</td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary"
+                  onclick="copyCode('code2')"
+                >
+                  Copiar
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>01/10/2024</td>
+              <td id="code3">ROKDEVSHBQ</td>
+              <td>1.000 Gemas</td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary"
+                  onclick="copyCode('code3')"
+                >
+                  Copiar
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>01/10/2024</td>
+              <td id="code4">ROKDEVSHB1</td>
+              <td>1.000 Gemas</td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary"
+                  onclick="copyCode('code4')"
+                >
+                  Copiar
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>01/10/2024</td>
+              <td id="code5">PlayRoK4PC</td>
+              <td>Apenas para PC - Chave</td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary"
+                  onclick="copyCode('code5')"
+                >
+                  Copiar
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>01/10/2024</td>
+              <td id="code6">ygg7nurncf</td>
+              <td>Vários itens</td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary"
+                  onclick="copyCode('code6')"
+                >
+                  Copiar
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>01/10/2024</td>
+              <td id="code7">ygv6p26rar</td>
+              <td>Vários itens</td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary"
+                  onclick="copyCode('code7')"
+                >
+                  Copiar
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>01/10/2024</td>
+              <td id="code8">ygz8darb3p</td>
+              <td>Vários itens</td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary"
+                  onclick="copyCode('code8')"
+                >
+                  Copiar
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Seção Dicas -->
+    <section id="dicas" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-4">Dicas para Iniciantes</h2>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Priorize VIP</h5>
+                <p class="card-text">
+                  Invista seus recursos para subir o nível de VIP, já que as
+                  vantagens são essenciais para o crescimento a longo prazo.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Foque em Pesquisas</h5>
+                <p class="card-text">
+                  Sempre mantenha suas pesquisas ativas, especialmente as que
+                  aumentam a produção de recursos e o poder militar.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Complete Eventos</h5>
+                <p class="card-text">
+                  Eventos são uma excelente maneira de ganhar recompensas raras.
+                  Participe de todos que puder.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Junte Gemas</h5>
+                <p class="card-text">
+                  Economize suas gemas para eventos importantes, como o "Roda da
+                  Fortuna" ou para subir o nível de VIP.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Concentre-se em um Comandante</h5>
+                <p class="card-text">
+                  Evite dividir suas esculturas, concentre-se em melhorar um
+                  único comandante para maximizar seu poder.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Alianças Fortes</h5>
+                <p class="card-text">
+                  Estar em uma boa aliança facilita o crescimento e oferece
+                  grandes recompensas nas conquistas conjuntas.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Gerencie seu Tempo</h5>
+                <p class="card-text">
+                  Sincronize construções e pesquisas para que sejam concluídas
+                  enquanto você está offline, otimizando seu tempo no jogo.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Farmar é Essencial</h5>
+                <p class="card-text">
+                  Sempre envie seus coletores para farmar recursos, pois são
+                  essenciais para seu progresso.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Função para copiar códigos e manipular o header -->
+    <script>
+      function copyCode(elementId) {
+        const code = document.getElementById(elementId).textContent;
+        navigator.clipboard.writeText(code).then(() => {
+          alert("Código copiado: " + code);
+        });
+      }
+
+      // Função para ajustar o header ao rolar a página
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>
