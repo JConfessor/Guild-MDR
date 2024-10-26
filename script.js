@@ -75,20 +75,4 @@ document.querySelectorAll(".nav-link").forEach((link) => {
 });
 
 // Executa o fade-in nos elementos ao carregar a página
-window.addEventListener("DOMContentLoaded", () => {
-  handleScrollFadeIn();
-  updatePageViews(); // Atualiza o contador de visualizações
-});
-
-// Função para atualizar o contador de visualizações usando CountAPI
-function updatePageViews() {
-  fetch("https://api.countapi.xyz/hit/rokmdr_vercel_app/visitas_totais")
-    .then((response) => response.json())
-    .then((data) => {
-      document.getElementById("page-views").innerText = data.value;
-    })
-    .catch((error) => {
-      console.error("Erro ao obter o contador de visualizações:", error);
-      document.getElementById("page-views").innerText = "N/A";
-    });
-}
+window.addEventListener("DOMContentLoaded", handleScrollFadeIn);
