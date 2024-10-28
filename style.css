@@ -105,10 +105,12 @@ footer {
 footer a {
   color: #fba42b;
   text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 footer a:hover {
-  text-decoration: underline;
+  color: #fc6404; /* Cor de destaque ao passar o mouse */
+  transform: scale(1.2); /* Aumenta levemente o ícone */
 }
 
 /* Responsividade */
@@ -531,4 +533,19 @@ footer a:hover {
   .section-evento .evento-img {
     max-width: 200px;
   }
+}
+
+/* Estilo base para os ícones */
+.navbar .fa-discord,
+.navbar .fa-whatsapp {
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito de hover */
+.navbar .fa-discord:hover,
+.navbar .fa-whatsapp:hover {
+  color: #fc6404; /* Cor de destaque ao passar o mouse */
+  transform: scale(1.2); /* Aumenta levemente o ícone */
 }
