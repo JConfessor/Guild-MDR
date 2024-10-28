@@ -57,6 +57,9 @@
               <li class="nav-item mx-2">
                 <a class="nav-link" href="#codigos">Códigos</a>
               </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#simulado">Simulado</a>
+              </li>
             </ul>
             <!-- Ícones de redes sociais (aparecem apenas no mobile quando o menu é expandido) -->
             <div class="d-md-none text-center mt-3">
@@ -226,130 +229,7 @@
               <th scope="col">Ação</th>
             </tr>
           </thead>
-          <tbody>
-            <!-- Novos códigos adicionados -->
-
-            <tr>
-              <td>27/10/2024</td>
-              <td id="code1000">Yjc9hgtehp</td>
-              <td>Vários itens - NOVO</td>
-              <td>
-                <button
-                  class="btn btn-sm btn-primary"
-                  onclick="copyCode('code1000')"
-                >
-                  Copiar
-                </button>
-              </td>
-            </tr>
-
-            <tr>
-              <td>27/10/2024</td>
-              <td id="code1001">yj34mm49uy</td>
-              <td>Vários itens - NOVO</td>
-              <td>
-                <button
-                  class="btn btn-sm btn-primary"
-                  onclick="copyCode('code1001')"
-                >
-                  Copiar
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>25/10/2024</td>
-              <td id="code8">yj3u4k6zhi</td>
-              <td>Vários itens - NOVO</td>
-              <td>
-                <button
-                  class="btn btn-sm btn-primary"
-                  onclick="copyCode('code8')"
-                >
-                  Copiar
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>25/10/2024</td>
-              <td id="code9">yjaajw5xk4</td>
-              <td>Vários itens - NOVO</td>
-              <td>
-                <button
-                  class="btn btn-sm btn-primary"
-                  onclick="copyCode('code9')"
-                >
-                  Copiar
-                </button>
-              </td>
-            </tr>
-
-            <!-- Códigos existentes mantidos -->
-            <tr>
-              <td>01/10/2024</td>
-              <td id="code1">ROKYRRECAP</td>
-              <td>500 Gemas</td>
-              <td>
-                <button
-                  class="btn btn-sm btn-primary"
-                  onclick="copyCode('code1')"
-                >
-                  Copiar
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>01/10/2024</td>
-              <td id="code2">ROK2024HBD</td>
-              <td>100 Chaves de Prata</td>
-              <td>
-                <button
-                  class="btn btn-sm btn-primary"
-                  onclick="copyCode('code2')"
-                >
-                  Copiar
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>01/10/2024</td>
-              <td id="code3">ROKDEVSHBQ</td>
-              <td>1.000 Gemas</td>
-              <td>
-                <button
-                  class="btn btn-sm btn-primary"
-                  onclick="copyCode('code3')"
-                >
-                  Copiar
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>01/10/2024</td>
-              <td id="code4">ROKDEVSHB1</td>
-              <td>1.000 Gemas</td>
-              <td>
-                <button
-                  class="btn btn-sm btn-primary"
-                  onclick="copyCode('code4')"
-                >
-                  Copiar
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>01/10/2024</td>
-              <td id="code5">PlayRoK4PC</td>
-              <td>Apenas para PC - Chave</td>
-              <td>
-                <button
-                  class="btn btn-sm btn-primary"
-                  onclick="copyCode('code5')"
-                >
-                  Copiar
-                </button>
-              </td>
-            </tr>
-          </tbody>
+          <tbody id="codigos-tbody"></tbody>
         </table>
       </div>
 
@@ -391,6 +271,36 @@
         </ul>
       </div>
     </div>
+    <!-- Seção Respostas do Simulado -->
+    <section id="simulado" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Respostas do Simulado</h2>
+        <!-- Campo de Pesquisa -->
+        <input
+          type="text"
+          id="searchPergunta"
+          class="form-control mb-3"
+          placeholder="Pesquise por uma pergunta..."
+          oninput="filterPerguntas()"
+        />
+        <!-- Envolva a tabela com um contêiner para o scroll -->
+        <div class="table-wrapper">
+          <table
+            class="table table-bordered table-hover rounded table-perguntas"
+          >
+            <thead class="bg-primary text-white">
+              <tr>
+                <th scope="col">Pergunta</th>
+                <th scope="col">Resposta</th>
+              </tr>
+            </thead>
+            <tbody id="simulado-tbody">
+              <!-- Conteúdo das perguntas e respostas -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-light py-4">
