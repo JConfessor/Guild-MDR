@@ -362,3 +362,125 @@ footer a:hover {
 .dicas {
   color: wheat;
 }
+
+/* Contêiner para scroll com altura fixa */
+.table-wrapper {
+  max-height: 300px; /* Altura fixa para o conteúdo da tabela */
+  overflow-y: auto; /* Scroll vertical */
+  width: 100%;
+}
+
+/* Estilos gerais para a tabela de perguntas */
+.table-perguntas {
+  width: 100%; /* Define a largura completa */
+  border-collapse: collapse; /* Remove o espaço entre células */
+  table-layout: fixed; /* Mantém a largura das colunas fixa */
+}
+
+/* Configurações para o cabeçalho da tabela */
+.table-perguntas thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #151515; /* Fundo escuro para o cabeçalho */
+  color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.table-perguntas thead th {
+  padding: 0.5rem;
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 2px solid #000000;
+  white-space: nowrap; /* Impede quebra de linha no cabeçalho */
+}
+
+/* Configurações para células */
+.table-perguntas th,
+.table-perguntas td {
+  padding: 0.5rem;
+  text-align: left;
+  white-space: normal; /* Permite quebra de linha no conteúdo */
+  border: 1px solid #a8a8a8; /* Borda das células */
+  box-sizing: border-box;
+}
+
+/* Define proporções para cada coluna */
+.table-perguntas td:nth-child(1),
+.table-perguntas th:nth-child(1) {
+  width: 70%; /* Primeira coluna ocupa 70% */
+}
+
+.table-perguntas td:nth-child(2),
+.table-perguntas th:nth-child(2) {
+  width: 30%; /* Segunda coluna ocupa 30% */
+}
+
+/* Efeito hover nas linhas da tabela */
+.table-perguntas tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  /* Oculta os títulos das colunas no mobile */
+  .table-perguntas thead {
+    display: none;
+  }
+
+  /* Exibe cada célula como bloco em dispositivos móveis */
+  .table-perguntas tr {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .table-perguntas td {
+    display: inline-block;
+    width: 100%; /* Cada célula ocupa a largura completa */
+    padding: 0.5rem;
+    text-align: left;
+    word-break: break-word;
+  }
+}
+/* Estilos para o campo de pesquisa */
+#searchPergunta {
+  width: 100%;
+  max-width: 500px; /* Limite de largura em telas maiores */
+  margin: 0 auto 1.5rem auto; /* Centraliza e adiciona espaçamento inferior */
+  padding: 10px 15px 10px 40px; /* Espaçamento interno com espaço para ícone */
+  font-size: 1rem;
+  border-radius: 25px; /* Borda arredondada */
+  border: 1px solid #363636;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* Necessário para o ícone */
+}
+
+#searchPergunta:focus {
+  outline: none;
+  border-color: #f72313; /* Cor de destaque ao focar */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Adiciona um ícone de pesquisa dentro do campo */
+.search-container {
+  position: relative;
+}
+
+.search-container i {
+  position: absolute;
+  top: 50%;
+  left: 15px; /* Distância do lado esquerdo do campo */
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1.2rem;
+  pointer-events: none; /* Ícone não interativo */
+  transition: color 0.3s ease;
+}
+
+#searchPergunta:focus + i {
+  color: #f72313; /* Muda a cor do ícone ao focar no campo */
+}
