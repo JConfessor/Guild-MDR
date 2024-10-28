@@ -365,7 +365,7 @@ footer a:hover {
 
 /* Contêiner para scroll com altura fixa */
 .table-wrapper {
-  max-height: 300px; /* Altura fixa para o conteúdo da tabela */
+  max-height: 500px; /* Altura fixa para o conteúdo da tabela */
   overflow-y: auto; /* Scroll vertical */
   width: 100%;
 }
@@ -483,4 +483,52 @@ footer a:hover {
 
 #searchPergunta:focus + i {
   color: #f72313; /* Muda a cor do ícone ao focar no campo */
+}
+
+/* Seção do Evento */
+.section-evento {
+  background-color: #010101; /* Fundo escuro para destacar a seção */
+  color: #ffffff;
+  padding: 3rem 0;
+  border-radius: 0px;
+}
+
+/* Estilo para a imagem */
+.section-evento .evento-img {
+  width: 100%;
+  max-width: 350px; /* Tamanho máximo para a imagem */
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Título e subtítulos */
+.section-evento h2 {
+  color: #fc6404;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.section-evento h3 {
+  color: #fab484;
+  font-size: 1.3rem;
+}
+
+/* Botão de Participação */
+.section-evento .btn-primary {
+  background-color: #fc6404;
+  border-color: #fc6404;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+}
+
+.section-evento .btn-primary:hover {
+  background-color: #fab484;
+  border-color: #fab484;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+  .section-evento .evento-img {
+    max-width: 200px;
+  }
 }
