@@ -1,0 +1,47 @@
+[
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "converter_para_json",
+        "kind": 2,
+        "importPath": "organize",
+        "description": "organize",
+        "peekOfCode": "def converter_para_json(arquivo_entrada, arquivo_saida):\n    # Abre o arquivo de entrada para leitura\n    with open(arquivo_entrada, 'r', encoding='utf-8') as f:\n        conteudo = f.read()\n    # Expressão regular para capturar ID, Pergunta e Resposta\n    padrao = r\"Questão (\\d+)\\n(.*?)\\nR: (.*?)\\n\"\n    dados = []\n    # Procura todas as correspondências no arquivo\n    for correspondencia in re.findall(padrao, conteudo, re.DOTALL):\n        id_pergunta, pergunta, resposta = correspondencia",
+        "detail": "organize",
+        "documentation": {}
+    },
+    {
+        "label": "arquivo_entrada",
+        "kind": 5,
+        "importPath": "organize",
+        "description": "organize",
+        "peekOfCode": "arquivo_entrada = 'perguntas.txt'  # Altere para o nome do seu arquivo\narquivo_saida = 'perguntas.json'\nconverter_para_json(arquivo_entrada, arquivo_saida)",
+        "detail": "organize",
+        "documentation": {}
+    },
+    {
+        "label": "arquivo_saida",
+        "kind": 5,
+        "importPath": "organize",
+        "description": "organize",
+        "peekOfCode": "arquivo_saida = 'perguntas.json'\nconverter_para_json(arquivo_entrada, arquivo_saida)",
+        "detail": "organize",
+        "documentation": {}
+    }
+]
